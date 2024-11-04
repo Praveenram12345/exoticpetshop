@@ -1,0 +1,113 @@
+/* Base styles (default) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 1500px;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    height: 600px;
+    background-color: antiquewhite;
+}
+
+.content {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.float-img {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height: 400px;
+    width: 300px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: rgb(255, 249, 249);
+    padding: 50px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #main {
+        width: 100%;
+    }
+    
+    .container {
+        flex-direction: column; /* Stack content and sidebar */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .content {
+        padding-right: 0; /* Reset padding */
+    }
+
+    .float-img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        float: none; /* Remove float */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Decrease heading size */
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    .sidebar {
+        padding: 5px; /* Adjust padding */
+    }
+}
